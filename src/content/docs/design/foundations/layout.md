@@ -2,12 +2,14 @@
 title: Layout
 description: How wide the content of a page can get, and how much space it keeps from the edges of the screen.
 order: 3.5
+source: https://github.com/home-assistant/frontend/blob/dev/src/resources/theme/core.globals.ts
+lastVerified: 2026-10-25
 ---
 
 > [!NOTE]
 > This page describes tokens from a frontend pull request that is not merged yet. Until it is merged, the tokens below do not exist in the frontend.
 
-Every page in Home Assistant has a maximum width for its content, and space between the content and the edges of the screen. When every page picks its own values, moving between pages feels uneven. So there are three content widths and one gutter, and each page uses one of them.
+Every page in Home Assistant has a maximum width for its content, and space between the content and the edges of the screen. When every page picks its own values, moving between pages feels uneven. So there are three content widths and one gutter for the settings, profile, and marketplace pages. Some parts of the interface are not covered yet. They are listed at the end of this page.
 
 ## Content widths
 
@@ -49,4 +51,4 @@ Below 600px, the settings dashboard and the system navigation page let their car
 
 ## Not covered yet
 
-Breakpoints, dialogs, dashboards, and the automation, script, and scene editors are not part of these widths yet. The frontend uses many different breakpoint values today. Bringing those together is a bigger change, planned as a follow-up.
+Breakpoints, dialogs, dashboards, and the automation, script, and scene editors are not part of these widths yet.
