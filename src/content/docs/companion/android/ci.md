@@ -38,7 +38,7 @@ The app uses [calendar versioning](https://calver.org/), like Home Assistant Cor
 - That every app builds, in debug and release.
 - That no existing database schema in `common/schemas` was changed, and that the build doesn't produce schema changes you forgot to commit. To change the database, increase its version instead.
 - If your pull request changes the Lokalise setup in `.github/actions/download-translations`, that the translations still download.
-- `zizmor.yml` scans every workflow and local action with [zizmor](https://docs.zizmor.sh/) in pedantic mode, whether or not your pull request touches them. Any finding fails the check, and the findings also appear as Code Scanning annotations on your pull request. See [changing a workflow](#changing-a-workflow).
+- `zizmor.yml` scans every workflow and local action with [zizmor](https://docs.zizmor.sh/) in pedantic mode, whether or not your pull request touches them. The generated `e2e-triage.lock.yml` is skipped, since it can't be edited by hand. Any finding fails the check, and the findings also appear as Code Scanning annotations on your pull request. See [changing a workflow](#changing-a-workflow).
 - It uploads the APKs as an artifact, so anyone can [test your change](/companion/android/get-started/#test-a-pull-request-build).
 
 Debug builds on CI use the mock Firebase file in `.github/mock-google-services.json`.
